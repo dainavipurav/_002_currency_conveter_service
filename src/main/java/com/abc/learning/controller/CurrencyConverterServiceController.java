@@ -22,7 +22,7 @@ public class CurrencyConverterServiceController {
 		requestParameters.put("to", to);
 
 		CurrencyConverterBean restTemplateRespose = new RestTemplate()
-				.getForEntity("http://localhost:9000/convert-currency/from/{from}/to/{to}", CurrencyConverterBean.class,
+				.getForEntity("http://localhost:8003/convert-currency/from/{from}/to/{to}", CurrencyConverterBean.class,
 						requestParameters)
 				.getBody();
 
